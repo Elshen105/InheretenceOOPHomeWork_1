@@ -15,6 +15,7 @@ public class Main {
         car.addFuel(20);
         car.addFuel(30);
         car.addFuel(10);
+        car.addFuel(10);
 
 
     }

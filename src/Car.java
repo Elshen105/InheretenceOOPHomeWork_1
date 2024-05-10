@@ -1,22 +1,22 @@
 public class Car extends Vehicle {
-    public int fuelCapacity;
-    public final int maxCapacity = 90;
+    public int currentBenzineLitres;
+    public final int fuelCapacity = 90;
 
 
-    public Car(String brand, String model, int mileage, int fuelCapacity) {
+    public Car(String brand, String model, int mileage, int currentBenzineLitres) {
         super(brand, model, mileage);
-        this.fuelCapacity = fuelCapacity;
+        this.currentBenzineLitres = currentBenzineLitres;
     }
 
 
     public void addFuel(int liters) {
-        if (fuelCapacity + liters <= maxCapacity) {
-            fuelCapacity += liters;
-            System.out.println(liters + " liters of Fuel added" + "\nFuel litres : " + fuelCapacity);
+        if (currentBenzineLitres + liters <= fuelCapacity) {
+            currentBenzineLitres += liters;
+            System.out.println(liters + " liters of Fuel added" + "\nFuel litres : " + currentBenzineLitres);
         } else {
-            int addedFuel = maxCapacity - fuelCapacity;
-            fuelCapacity = maxCapacity;
-            System.err.println("Maximum fuel Capacity : " + maxCapacity + "\nMaximum fuel that can be added: " + addedFuel);
+            int addedFuel = fuelCapacity - currentBenzineLitres;
+            currentBenzineLitres = fuelCapacity;
+            System.err.println("Maximum fuel Capacity : " + fuelCapacity + "\nMaximum fuel that can be added: " + addedFuel);
         }
     }
 
